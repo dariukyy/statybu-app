@@ -34,9 +34,10 @@ type FlatResultType = {
 };
 
 function FlatFoundationForm() {
-  const [, setResult] = useState<FlatResultType | null>(null);
+  const [result, setResult] = useState<FlatResultType | null>(null);
   const [armatureDropdown, setArmatureDropdown] = useState<boolean>(false);
-  const [armatureValue] = useState<number>(11.7);
+  const [armatureValue, setArmatureValue] = useState<number>(11.7);
+  console.log(result);
 
   const {
     handleSubmit,
@@ -71,6 +72,7 @@ function FlatFoundationForm() {
     alert(
       `Perimetras yra ${perimeter} m. Plotas yra ${baseArea} m2. Šoninė plotas yra ${sideArea} m2. Krūvis yra ${soilLoad} kg/cm2. Betono svoris yra ${concreteWeight} kg. Betono tūris yra ${concreteVolume} m3.`
     );
+    setArmatureValue(11.7);
 
     reset();
   }
