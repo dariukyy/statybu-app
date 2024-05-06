@@ -37,7 +37,6 @@ function FlatFoundationForm() {
   const [result, setResult] = useState<FlatResultType | null>(null);
   const [armatureDropdown, setArmatureDropdown] = useState<boolean>(false);
   const [armatureValue, setArmatureValue] = useState<number>(11.7);
-  console.log(result);
 
   const {
     handleSubmit,
